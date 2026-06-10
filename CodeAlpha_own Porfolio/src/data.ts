@@ -3,7 +3,7 @@ import { Skill, Project, Testimonial, Service } from './types';
 export const PERSONAL_INFO = {
   name: 'Kamran Khan',
   title: 'Front-End Developer & Web Designer',
-  avatar: 'src/assets/images/WhatsApp Image 2026-06-10 at 10.46.06 PM.jpeg',
+  avatar: 'https://tse4.mm.bing.net/th/id/OIP.CtIkOu_P2SLVCz2Xp45izgHaJE?r=0&rs=1&pid=ImgDetMain&o=7&rm=3',
   cvUrl: '#', // We will generate an alert or download trigger
   githubUrl: 'https://github.com/repos',
   linkedinUrl: 'https://www.linkedin.com/in/kamran-khan-764421312/',
