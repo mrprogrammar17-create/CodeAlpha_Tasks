@@ -1,0 +1,132 @@
+@import "tailwindcss";
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Smooth Custom Scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: rgba(148, 163, 184, 0.3); /* slate-400 */
+    border-radius: 9999px;
+  }
+  
+  .dark ::-webkit-scrollbar-thumb {
+    background: rgba(168, 85, 247, 0.2); /* purple-500/20 */
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(168, 85, 247, 0.5); /* purple-500/50 */
+  }
+
+  body {
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  .dark body, .dark .min-h-screen {
+    background-color: #050508 !important;
+    color: #e2e8f0 !important;
+  }
+}
+
+/* Custom Keyframe Animations list */
+@keyframes caret-blink {
+  0%, 100% { border-color: transparent }
+  50% { border-color: currentColor }
+}
+
+@keyframes load-bar-slide {
+  0% { transform: translateX(-100%) }
+  50% { transform: translateX(0%) }
+  100% { transform: translateX(100%) }
+}
+
+@keyframes wiggle-shake {
+  0%, 100% { transform: rotate(0deg) }
+  25% { transform: rotate(-6deg) }
+  75% { transform: rotate(6deg) }
+}
+
+@keyframes float-subtle {
+  0%, 100% { transform: translateY(0px) }
+  50% { transform: translateY(-6px) }
+}
+
+@keyframes fade-in-anim {
+  0% { opacity: 0; transform: scale(0.98); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+@keyframes slide-up-anim {
+  0% { opacity: 0; transform: translateY(16px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Custom Animation Utility Shortcuts */
+.animate-caret {
+  animation: caret-blink 0.8s infinite;
+}
+
+.animate-loading-bar {
+  animation: load-bar-slide 1.8s infinite ease-in-out;
+}
+
+.animate-wiggle {
+  animation: wiggle-shake 1.5s infinite ease-in-out;
+}
+
+.animate-bounce-subtle {
+  animation: float-subtle 3s infinite ease-in-out;
+}
+
+.animate-fade-in {
+  animation: fade-in-anim 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-slide-up {
+  animation: slide-up-anim 0.45s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Glow overlays and utility details */
+.bg-slate-955\/80 {
+  background-color: rgba(9, 15, 29, 0.8);
+}
+.bg-slate-955 {
+  background-color: rgb(9, 15, 29);
+}
+.dark .bg-slate-905 {
+  background-color: rgba(255, 255, 255, 0.03);
+}
+.text-slate-650 {
+  color: rgb(75, 85, 99);
+}
+.text-slate-550 {
+  color: rgb(100, 116, 139);
+}
+.text-slate-450 {
+  color: rgb(148, 163, 184);
+}
+.fill-yellow-450 {
+  fill: rgb(234, 179, 8);
+}
+.border-slate-150 {
+  border-color: rgb(241, 245, 249);
+}
+.dark .border-slate-850 {
+  border-color: rgba(255, 255, 255, 0.08);
+}
+.text-violet-605 {
+  color: rgb(147, 51, 234); /* purple-600 */
+}
+.bg-blue-105 {
+  background-color: rgb(239, 246, 255);
+}
